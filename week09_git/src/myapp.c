@@ -9,6 +9,8 @@ double calculate(char* op, double a, double b) {
     else if (strcmp(op, "-") == 0) return mysub(a, b);
     else if (strcmp(op, "*") == 0) return mymul(a, b);
     else if (strcmp(op, "/") == 0) return mydiv(a, b);
+    else if (*op == '%') return mymod(a, b);
+    else if (*op == '^') return mypow(a, b);
     else {
         printf("Unsupported operation: %s\n", op);
         return 0;
