@@ -1,17 +1,20 @@
 #include <stdio.h>
+#include <string.h>
+#include "myops.h"
 
 double calculate(char* op, double a, double b) {
     printf("Calculating.....\n");
 
-    if (*op == '+') return a + b;
-    else if (*op == '-') return a - b;
-    else if (*op == '*') return a * b;
-    else if (*op == '/') return b != 0 ? a / b : 0;
+    if (strcmp(op, "+") == 0) return myadd(a, b);
+    else if (strcmp(op, "-") == 0) return mysub(a, b);
+    else if (strcmp(op, "*") == 0) return mymul(a, b);
+    else if (strcmp(op, "/") == 0) return mydiv(a, b);
     else {
-        printf("Invalid operator.\n");
+        printf("Unsupported operation: %s\n", op);
         return 0;
     }
 }
+
 
 int main(void) {
 
