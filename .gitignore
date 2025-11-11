@@ -1,0 +1,12 @@
+# object files
+*.o
+
+# library / build outputs
+*.a
+*.so
+*.dylib
+
+# build directories
+obj/
+lib/
+bin/

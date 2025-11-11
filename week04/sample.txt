@@ -1,0 +1,4 @@
+abc bac cba
+bac cba abc
+cba abc bac
+
